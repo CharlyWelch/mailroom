@@ -15,7 +15,7 @@ while choice == '0':
 
 
 # If the user selects ‘Send a Thank You’, prompt for a Full Name.
-if choice == '2':
+if choice == '1':
     ask FULL NAME
     raw_input
 
@@ -44,5 +44,11 @@ if type(value)!=int:
 donor_data[user] = donor_data[user] += value
 
 # Finally, use string formatting to compose an email thanking the donor for their generous donation. Print the email to the terminal and return to the original prompt.
-if choice == '1':
+
     "Dear {0}, Thank you for your donation of {1}! We will be sure to put it to good use! Sincerely, Your Local Charity" [user, last value in users donations list]
+
+if choice =='2':
+    #Print a list of your donors, sorted by total historical donation amount.
+    #Include Donor Name, total donated, number of donations and average donation amount as values in each row.
+    #Using string formatting, format the output rows as nicely as possible. The end result should be tabular (values in each column should align with those above and below)
+    #After printing this report, return to the original prompt.
