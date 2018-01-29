@@ -15,13 +15,10 @@ while choice == '0':
 # # If the user selects ‘Send a Thank You’, prompt for a Full Name.
 if choice == '1':
     name = input('Full Name:')
-    if name.lower() != 'list':
-        print(name)
-
-# # If the user types ‘list’, show them a list of the donor names and re-prompt
-if name.lower() == 'list':
-    print(donor_data)
-    name = input("Full name:")
+    while name.lower() == 'list':
+        print(donor_data)
+        name = input("Full name:")
+    print(name)
 
 # # If the user types a name not in the list, add that name to the data structure and use it.
 # if donor_data[user] not in donor_data:
@@ -33,6 +30,7 @@ if name.lower() == 'list':
 
 # # Once a name has been selected, prompt for a donation amount.
 # value = input("please enter a donation amount")
+# donor_data[user] = donor_data[user] += value
 
 # # Verify that the amount is in fact a number, and re-prompt if it isn’t.
 # if type(value)!=int:
@@ -49,4 +47,4 @@ if name.lower() == 'list':
 #     #Print a list of your donors, sorted by total historical donation amount.
 #     #Include Donor Name, total donated, number of donations and average donation amount as values in each row.
 #     #Using string formatting, format the output rows as nicely as possible. The end result should be tabular (values in each column should align with those above and below)
-#     #After printing this report, return to the original prompt.
+#     #After printing this report, return to the original prompt (choice == 0 might work for this!) .
