@@ -31,4 +31,10 @@ def main():
                 avg = total/numdon
                 print("Name: {0} \t Total: {1} \t Number Donations: {2} \t Average donation: {3}".format(key, total, numdon, avg))
 
+# def fake1(choice):
+#     if choice == input('1: Send a Thank You \n2: Create a Report \n3: Quit')
+#         choice = '1'
+
+#     elif choice == '2':
+#         return "Report created"
 main()
